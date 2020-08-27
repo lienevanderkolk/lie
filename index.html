@@ -1,0 +1,2047 @@
+
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="da3096500e0c4db545a891a9-text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"61d16f3f29",applicationID:"115621865"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(c(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(5),c=e(6),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,n){s[n]=i(p+n,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(l+"tracer",[u.now(),e,t],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&d("lcp",[t[t.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var n=Math.round(e.timeStamp),t={type:e.type};n<=p.now()?t.fid=p.now()-n:n>p.offset&&n<=Date.now()?(n-=p.offset,t.fid=p.now()-n):n=p.now(),g=!0,d("timing",["fi",n,t])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(4),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e){function n(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,n,!1)}n.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],5:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],6:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],7:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function t(t,r,i,o){if(!p.aborted||o){e&&e(t,r,i);for(var a=n(i),c=v(t),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[t]];return d&&d.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(t)}function y(e,n){u(e,function(e,t){n=n||"feature",w[t]=n,n in s||(s[n]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(5),s={},d={},p=n.exports=i();p.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(w,function(n,t){e[n]||(e[n]=t)});var t=a();f("mark",["onload",t+E.offset],null,"api"),f("timing",["load",t]);var r=l.createElement("script");r.src="https://"+e.agent,n.parentNode.insertBefore(r,n)}}function i(){"complete"===l.readyState&&o()}function o(){f("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-E.offset}var c=(new Date).getTime(),f=e("handle"),u=e(5),s=e("ee"),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,y=g&&g.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var h=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1177.min.js"},b=g&&y&&y[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:c,now:a,origin:h,features:{},xhrWrappable:b,userAgent:d};e(1),e(2),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),f("mark",["firstbyte",c],null,"api");var x=0,O=e(7)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(6),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof t?t(r,a):t||{}}catch(u){p([u,"",[r,a,i],c])}s(n+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(n+"err",[r,a,d],c),d}finally{s(n+"end",[r,a,f],c)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<n.length;f++)c=n[f],a=e[c],r(a)||(e[c]=t(a,u?c+i:i,o,c))}function s(t,r,i){if(!f||n){var o=f;f=!0;try{e.emit(t,r,i,n)}catch(a){p([a,t,r,i])}f=o}}function d(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){p([r])}for(var i in e)c.call(e,i)&&(n[i]=e[i]);return n}function p(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><script type="da3096500e0c4db545a891a9-text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"61d16f3f29","applicationID":"115621865","transactionName":"NlYHYRdZCkACAk1RXw8cI0ALWxBaDA8WWlESVktcC14LQwIGXEseF1oAQhYCDV0FDklZVwQ=","queueTime":0,"applicationTime":181,"agent":""}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Gold bullion investment guide - Whether you’re new to investing in gold or experienced at buying gold and holding gold, the guide is packed with must read advice on the best way to invest in gold bullion.">
+<meta name="keywords" content="">
+<title>How to Buy Gold - Guide to Investing in Gold | BullionByPost</title>
+
+<script type="da3096500e0c4db545a891a9-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WL73DB5');</script>
+
+
+<style>.async-hide { opacity: 0 !important} </style>
+
+<script type="da3096500e0c4db545a891a9-text/javascript">
+            
+                (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-WL73DB5':true});
+
+// Google docs mention using the tag id rather than optimise id for this code above.
+// https://support.google.com/360suite/optimize/answer/7359264
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-8374486-1', 'auto');
+ga('require', 'ec');
+ga('require', 'GTM-TL92RBX');
+
+            
+        </script>
+<link rel="shortcut icon" href="https://www.bullionbypost.co.uk/static/images/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://www.bullionbypost.co.uk/static/images/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://www.bullionbypost.co.uk/static/images/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://www.bullionbypost.co.uk/static/images/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://www.bullionbypost.co.uk/static/images/touch-icon-ipad-retina.png">
+<link rel="alternate" hreflang="en-gb" href="https://www.bullionbypost.co.uk/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-ie" href="https://www.bullionbypost.ie/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-us" href="https://www.bullionbypost.com/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="bg" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="hr" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="cs" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="da" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-at" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-be" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-bg" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-cy" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-cz" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-de" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-dk" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-fi" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-fr" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-gr" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-hr" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-hu" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-it" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-lv" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-lt" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-lu" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-mt" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-nl" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-pl" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-pt" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-ro" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-sk" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-si" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-es" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="en-se" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="fi" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="de" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="de-at" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="hu" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="lv" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="lt" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="lb" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="mt" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="pl" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="pt" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="ro" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="sk" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="sl" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="sv" href="https://www.bullionbypost.eu/info/how-to-buy-gold/" />
+<link rel="alternate" hreflang="es" href="https://www.inversoro.es/info/guia-de-inversion/" />
+<link rel="alternate" hreflang="nl" href="https://www.goldbypost.nl/info/hoe-goud-kopen/" />
+<link rel="alternate" hreflang="nl-be" href="https://www.goldbypost.nl/info/hoe-goud-kopen/" />
+<link rel="stylesheet" href="https://www.bullionbypost.co.uk/static/cache/css/output.e20c0ca1dde3.css" type="text/css">
+<script src="https://www.bullionbypost.co.uk/static/lib/sentry.min.js" type="da3096500e0c4db545a891a9-text/javascript"></script>
+<script type="da3096500e0c4db545a891a9-text/javascript">
+    var SENTRY_DSN = 'https://fe587f1a067e4cab9b479269da8790f0@sentry.jqbd.uk/2';
+    var SENTRY_TAG = 'jqb_js';
+    
+    var sentry_before_send = function(event) {
+        /***
+         * A Sentry JS beforeSend callback that only allows events that
+         * we specifically tagged to be sent to our Sentry server.
+         */
+        'use strict';
+        
+        // If the event has been tagged with SENTRY_TAG allow it to
+        // propagate.
+        if (event.tags !== undefined && event.tags.hasOwnProperty(SENTRY_TAG)) {
+            return event;
+        }
+        
+        // Non-tagged events should be dropped.
+        return null;
+    };
+    
+    // Initialise Sentry JS.
+    if (SENTRY_DSN !== '') {
+        Sentry.init({
+            dsn: SENTRY_DSN,
+            release: 'ea0295dbb341927cee1c5a798894c5767e3a4073',
+            beforeSend: sentry_before_send
+        });
+    }
+    
+    var log_to_sentry = function(error, level) {
+        /***
+         * Send the given error to Sentry at the given level. If level
+         * is not supplied it will default to error.
+         * 
+         * error should be either a string or an Error object.
+         * 
+         * level should be one of the following strings:
+         *   - 'error'
+         *   - 'warning'
+         *   - 'info'
+         *   - 'debug'
+         */
+        'use strict';
+        
+        if (typeof error === 'string') {
+            // Convert string to Error.
+            error = new Error(error);
+        } else if (!(error instanceof Error)) {
+            // Other types cannot be logged.
+            console.log('Cannot log object of type: ' + typeof error);
+            return null;
+        }
+        
+        if (level === undefined) {
+            level = 'error';
+        }
+        
+        var hash = null;
+        
+        Sentry.withScope(scope => {
+            scope.setLevel(level);
+            
+            // We tag the current scope in order to pass the filtering
+            // in sentry_before_send. 
+            scope.setTag(SENTRY_TAG, true);
+          
+            hash = Sentry.captureException(error);
+        });
+        
+        // We return the hash to mirror the behavior of
+        // Sentry.captureException.
+        return hash;
+    };
+</script>
+<meta name="google-site-verification" content="nEActud9LPLQyGkLj1K-XuOsqEv6AXkBWD5GII3ApSw">
+<script type="da3096500e0c4db545a891a9-text/javascript">
+            
+            ga('send', 'pageview');
+        </script>
+</head>
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL73DB5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="top-bar" class="hidden-xs">
+<div class="container">
+<div class="row">
+<div class="col-lg-7 col-md-6 col-sm-5 country-selector">
+<div id="location-selector">
+<a class="dropdown-toggle flag flag-gb" id="location-label" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+United Kingdom
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu" aria-labelledby="location-label">
+<li><a href="https://www.bullionbypost.eu/international/redirect/infopages:infopage/11/" class="flag flag-eu">Europe</a></li>
+<li><a href="https://www.inversoro.es/international/redirect/infopages:infopage/11/" class="flag flag-es">España</a></li>
+<li><a href="https://www.bullionbypost.ie/international/redirect/infopages:infopage/11/" class="flag flag-ie">Ireland</a></li>
+<li><a href="https://www.orissimo.it/international/redirect/infopages:infopage/11/" class="flag flag-it">Italia</a></li>
+<li><a href="https://www.xrysosonline.gr/international/redirect/infopages:infopage/11/" class="flag flag-gr">Ελλάδα</a></li>
+ <li><a href="https://www.bullionbypost.fr/international/redirect/infopages:infopage/11/" class="flag flag-fr">France</a></li>
+<li><a href="https://www.goldbypost.nl/international/redirect/infopages:infopage/11/" class="flag flag-nl">Nederland</a></li>
+<li><a href="https://www.bullionbypost.co.uk/international/redirect/infopages:infopage/11/" class="flag flag-gb selected">United Kingdom</a></li>
+<li><a href="https://www.bullionbypost.com/international/redirect/infopages:infopage/11/" class="flag flag-us">United States</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-5 col-md-6 col-sm-7">
+<ul class="links">
+<li>
+<a class="btn btn-xs btn-warning" id="create_account" href="/accounts/login/">
+Open Account
+</a>
+</li>
+<li id="login">
+<a href="/accounts/login/">
+<strong>
+Login
+</strong>
+</a>
+</li>
+<li>
+<a href="/info/faqs/">
+FAQs
+</a>
+</li>
+<li>
+<a href="/contact/">
+Contact Us
+</a>
+</li>
+<li>
+<a href="/refer-a-friend/">
+Refer a Friend
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="site-messages">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<p class="site-message">
+<span class="site-message-title">
+HIGH DEMAND:
+</span>
+Due to very high demand orders may take between 1-3 working days to be dispatched - <a href="/info/operational-update/">Click for our latest coronavirus update</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<header class="visible-xs mobile-header">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<a href="/">
+<div class="mobile-logo">
+<div>
+<img src="https://www.bullionbypost.co.uk/static/images/bbp-bars.png" alt="BullionByPost home">
+<p>Bullion<span class="gold">By</span>Post</p>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="mobile-menu-holder">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<div class="mobile-menu">
+<div class="mobile-menu-button mobile-menu-button-menu">
+<img class="closed" src="https://www.bullionbypost.co.uk/static/images/mobile-icons/menu.png" alt="Open menu">
+<img class="open" src="https://www.bullionbypost.co.uk/static/images/mobile-icons/close.png" alt="Close menu">
+<span>Menu</span>
+</div>
+<div class="mobile-menu-button mobile-menu-button-search">
+<img class="closed" src="https://www.bullionbypost.co.uk/static/images/mobile-icons/search.png" alt="Open searc menu">
+<img class="open" src="https://www.bullionbypost.co.uk/static/images/mobile-icons/close.png" alt="Close search menu">
+<span>Search</span>
+ </div>
+<a href="/gold-price/">
+<div class="mobile-menu-button mobile-menu-button-charts">
+<img class="closed" src="https://www.bullionbypost.co.uk/static/images/mobile-icons/charts.png" alt="Open charts menu">
+<img class="open" src="https://www.bullionbypost.co.uk/static/images/mobile-icons/close.png" alt="Close charts menu">
+<span>Charts</span>
+</div>
+</a>
+<div class="mobile-menu-button mobile-menu-button-login">
+<img class="closed" src="https://www.bullionbypost.co.uk/static/images/mobile-icons/login.png" alt="Open account menu">
+<img class="open" src="https://www.bullionbypost.co.uk/static/images/mobile-icons/close.png" alt="Close account menu">
+<span>
+Login
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mobile-panels-holder">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<div class="mobile-menu-panel">
+<div class="row">
+<div class="col-xs-12">
+<div class="mobile-submenu">
+<a href="/info/how-to-buy-gold/">
+<div class="mobile-submenu-button">
+<img src="https://www.bullionbypost.co.uk/static/images/mobile-icons/guide.png" alt="Buying guide">
+<span><span class="mobile-hide">Buying </span>Guide</span>
+</div>
+</a>
+<a href="/sell-to-us/">
+<div class="mobile-submenu-button">
+<img src="https://www.bullionbypost.co.uk/static/images/mobile-icons/sell.png" alt="Sell to us">
+<span>Sell</span>
+</div>
+</a>
+<a href="/gold-news/">
+<div class="mobile-submenu-button">
+<img src="https://www.bullionbypost.co.uk/static/images/mobile-icons/news.png" alt="Market news">
+<span><span class="mobile-hide">Market </span>News</span>
+</div>
+</a>
+<a href="/contact/">
+<div class="mobile-submenu-button">
+<img src="https://www.bullionbypost.co.uk/static/images/mobile-icons/contact.png" alt="Contact us">
+<span>Contact<span class="mobile-hide"> Us</span></span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<a href="/special-offers/">
+<div class="mobile-menu-item
+                                            
+                                                mobile-menu-item-red
+                                            
+                                        ">
+Special Offers
+ </div>
+</a>
+<a href="/new-bullion-products/">
+<div class="mobile-menu-item
+                                            
+                                        ">
+New Products
+</div>
+</a>
+<a href="/gold-bars/">
+<div class="mobile-menu-item
+                                            
+                                        ">
+Gold Bars
+</div>
+</a>
+<a href="/gold-coins/">
+<div class="mobile-menu-item
+                                            
+                                        ">
+Gold Coins
+</div>
+</a>
+<a href="/proof-sets/">
+<div class="mobile-menu-item
+                                            
+                                        ">
+Gold Proof Coins &amp; Sets
+</div>
+</a>
+<a href="/silver-bars/">
+<div class="mobile-menu-item
+                                            
+                                        ">
+Silver Bars
+</div>
+</a>
+<a href="/silver-coins/">
+<div class="mobile-menu-item
+                                            
+                                        ">
+Silver Coins
+</div>
+</a>
+<a href="/vat-free/">
+<div class="mobile-menu-item
+                                            
+                                        ">
+VAT-Free Silver
+</div>
+</a>
+<a href="/gifts/">
+<div class="mobile-menu-item
+                                            
+                                        ">
+Gifts
+</div>
+</a>
+<a href="/collectible-coins/">
+<div class="mobile-menu-item
+                                            
+                                        ">
+Collectible Coins
+</div>
+</a>
+<a href="/platinum-bars/">
+<div class="mobile-menu-item
+                                            
+                                        ">
+Platinum Bars
+</div>
+</a>
+ <a href="/platinum-coins/">
+<div class="mobile-menu-item
+                                            
+                                        ">
+Platinum Coins
+</div>
+</a>
+<a href="/palladium-bars/">
+<div class="mobile-menu-item
+                                            
+                                        ">
+Palladium Bars
+</div>
+</a>
+<a href="/bullion-refiners/">
+<div class="mobile-menu-item
+                                            
+                                        ">
+Bullion Refiners
+</div>
+</a>
+<a href="/accessories/">
+<div class="mobile-menu-item
+                                            
+                                        ">
+Accessories
+</div>
+</a>
+<a href="https://www.thefinejewellerycompany.com/" title="Ladies' Jewellery" target="_blank">
+<div class="mobile-menu-item">
+Ladies' Jewellery
+</div>
+</a>
+<a href="/allocated-storage/">
+<div class="mobile-menu-item mobile-menu-item-grey">
+Storage
+</div>
+</a>
+<a href="/vat-free-storage/">
+<div class="mobile-menu-item mobile-menu-item-grey">
+VAT-Free Storage
+</div>
+</a>
+<a href="/gold-pensions/">
+<div class="mobile-menu-item mobile-menu-item-grey">
+Pensions
+</div>
+</a>
+<a href="/info/how-to-buy/">
+<div class="mobile-menu-item mobile-menu-item-grey">
+How To Buy
+</div>
+</a>
+<a href="/info/about-us/">
+<div class="mobile-menu-item mobile-menu-item-grey">
+About Us
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="mobile-search-panel">
+<form class="search" method="get" id="mobile_search" action="/search/">
+<div class="input-group">
+<input type="search" placeholder="Search for..." class="form-control searchbox" autocomplete="off" name="q" />
+<span class="input-group-btn">
+<button type="submit" class="btn btn-primary">Search</button>
+ </span>
+</div>
+</form>
+</div>
+<div class="mobile-login-panel">
+<form method="post" action="/accounts/login/#returning-customer" class="form-horizontal" id="f_returning_customer_mobile_header">
+<input type='hidden' name='csrfmiddlewaretoken' value='W7Bv43LxRMmxu9CTGi7ytF78CQsIwPxM29nnYtjKGRNiYQxafIFUKI3ojQbeJv1B' />
+<input type="hidden" name="login" />
+<div class="form-group">
+<label class="control-label  " for="id_mobile-login-username">Email address</label>
+<div class=" ">
+<input type="text" name="mobile-login-username" maxlength="250" autocomplete="username email" class=" form-control" required id="id_mobile-login-username" />
+</div>
+</div>
+<div class="form-group">
+<label class="control-label  " for="id_mobile-login-password">Password</label>
+<div class=" ">
+<input type="password" name="mobile-login-password" autocomplete="current-password" class=" form-control" required id="id_mobile-login-password" />
+</div>
+</div>
+<p><a href="/accounts/login/#returning-customer">Forgot your password?</a></p>
+<button type="submit" class="btn btn-primary" formnovalidate>Login </button>
+<button class="btn btn-success pull-right mobile-register-button">Register an account</button>
+</form>
+</div>
+<div class="mobile-basket-panel">
+Basket
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mobile-contact-bar-holder">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<div class="mobile-contact-bar">
+<p>Call us: 0121 634 8060, 7 days, 7am - 10pm</p>
+<p>Free Insured Delivery</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<div class="small-box grey-background mobile-metal-prices-table">
+<div class="inner-box">
+<table class="horizontal-table">
+<tr>
+<th></th>
+<th>Ounce</th>
+<th>Gram</th>
+</tr>
+<tr>
+<td>Gold</td>
+<td><span class="gold-price-per-ounce">£1472.40</span></td>
+<td><span class="gold-price-per-gram">£47.339</span></td>
+</tr>
+<tr>
+<td>Silver</td>
+<td><span class="silver-price-per-ounce">£20.670</span></td>
+<td><span class="silver-price-per-gram">£0.6645</span></td>
+</tr>
+</table>
+<p class="update-time"><span class="hidden-sm">Live Prices </span>Updated 12:20 27/08/20</p>
+</div>
+<div class="inner-box dark-grey-background">
+<span class="currency-button selected gbp-prices">&pound;</span>
+<span class="currency-button usd-prices">$</span>
+<span class="currency-button eur-prices">&euro;</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="container">
+<header id="header" class="hidden-xs">
+<div class="row">
+<div class="col-lg-5 col-md-4 col-sm-5">
+<div class="logo">
+<a href="/">
+<img src="https://www.bullionbypost.co.uk/static/images/bbp-bars.png" class="img-responsive" alt="BullionByPost home">
+<p class="bbp">Bullion<span class="gold">By</span>Post</p>
+<p class="tagline">The UK's <span class="gold">No.1</span> Online Bullion Dealer*</p>
+<p id="delivery-tagline">Over 450,000 orders delivered</p>
+</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 center-column">
+<p class="phone">0121 634 8060</p>
+<p class="hours">Telephone: 7 days, 7am - 10pm</p>
+<p class="free-delivery">FREE Insured Delivery<sup>&#8224;</sup></p>
+<form class="search" id="main_search" method="get" action="/search/">
+<div class="input-group">
+<input type="search" placeholder="Search for..." class="form-control searchbox" autocomplete="off" name="q" />
+<span class="input-group-btn">
+<button type="submit" class="btn btn-primary">Search</button>
+</span>
+</div>
+</form>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-3">
+<div class="small-box grey-background metal-prices-box">
+<div class="inner-box dark-grey-background">
+<div class="metal-prices-title-row">
+<span class="box-title"><span class="hidden-sm"><a href="/gold-price/">Metal Price Charts</a></span></span>
+<span class="currency-button selected gbp-prices">&pound;</span>
+<span class="currency-button usd-prices">&dollar;</span>
+<span class="currency-button eur-prices">&euro;</span>
+</div>
+</div>
+<div class="inner-box">
+<table class="horizontal-table">
+<caption>Metal Prices</caption>
+<thead>
+<tr>
+<th><span class="hidden-sm">Metal</span></th>
+<th><span class="hidden">Price Per </span>Ounce</th>
+<th><span class="hidden">Price Per </span>Gram</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gold</td>
+<td class="gold-price-per-ounce" title="Gold price per ounce">&pound;1,472.40</td>
+<td class="gold-price-per-gram" title="Gold price per gram">&pound;47.339</td>
+</tr>
+<tr>
+<td>Silver</td>
+<td class="silver-price-per-ounce" title="Silver price per ounce">&pound;20.670</td>
+<td class="silver-price-per-gram" title="Silver price per gram">&pound;0.6645</td>
+</tr>
+<tr>
+<td>Platinum</td>
+<td class="platinum-price-per-ounce" title="Platinum price per ounce">&pound;707.96</td>
+<td class="platinum-price-per-gram" title="Platinum price per gram">&pound;22.761</td>
+</tr>
+</tbody>
+</table>
+<p class="update-time"><span class="hidden-sm">Live Prices </span>Updated 12:20 27/08/20</p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div id="content">
+
+<div class="row hidden-xs">
+<div class="col-sm-12">
+<nav>
+<div id="menu">
+ <ul>
+<li class="green wide"><a id="id_menu_buy" href="/">Buy</a></li>
+<li class="green wide"><a href="/sell-to-us/">Sell</a></li>
+<li><a href="/allocated-storage/">Storage</a></li>
+<li class="red"><a href="/vat-free-storage/">VAT-Free</a></li>
+<li class="hidden-md hidden-sm"><a href="/gold-pensions/">Pensions</a></li>
+<li class="hidden-sm"><a href="/info/how-to-buy/">How To Buy</a></li>
+<li><a href="/info/how-to-buy-gold/"><span class="hidden-sm">Investment </span>Guide</a></li>
+<li><a href="/investment-calculator/"><span class="hidden-md hidden-sm">Investment </span>Calculator</a></li>
+<li class="hidden-md"><a href="/info/about-us/">About<span class="hidden-sm"> Us</span></a></li>
+<li><a href="/gold-news/">News</a></li>
+<li class="gold"><a href="/gold-price/"><span class="hidden-sm">Price </span>Charts</a></li>
+<li class="blue"><a href="/order/">Basket (0)</a></li>
+</ul>
+</div>
+<div id="nav-footer" class="grey-background">
+<a href="/" class="home-icon-link">
+<div class="home"></div>
+</a>
+<a href="/">Home</a>
+>
+How to Invest in Gold Bullion? The Ultimate Guide to Gold Investment
+<span class="pull-right">
+You are not logged in &ndash; <a href="/accounts/login/" id="menu-nav-footer-login">Login</a> or<a href="/accounts/login/" id="menu-nav-footer-register">Register Now</a>
+</span>
+</div>
+</nav>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-2 col-sm-3">
+<div id="left-column">
+<div class="small-box left-nav-categories hidden-xs">
+<div class="inner-box grey-background title"><a href="/info/how-to-buy-gold/">How To Buy Gold</a></div>
+<div class="inner-box">
+<ul>
+<li class=" ">
+<a href="/info/how-to-buy/" title="How to Buy?">How to Buy?</a>
+</li>
+<li class=" ">
+<a href="/info/payment-options/" title="Payment Options">Payment Options</a>
+</li>
+<li class=" ">
+<a href="/info/delivery-options/" title="Delivery Options">Delivery Options</a>
+</li>
+<li class=" ">
+<a href="/info/how-to-buy-gold/storing-gold/" title="Gold Storage">Gold Storage</a>
+</li>
+<li class=" ">
+<a href="/allocated-storage/" title="Allocated Storage at Brink's">Storage at Brink's</a>
+</li>
+<li class="selected">
+<a href="/info/how-to-buy-gold/" title="Gold Investment Guide">Gold Investment Guide</a>
+</li>
+<li class=" ">
+<a href="/info/how-to-buy-gold/why-buy-gold/" title="Why buy gold?">Why buy gold?</a>
+</li>
+<li class=" ">
+<a href="/info/is-gold-a-good-investment/" title="Is gold a good investment?">Is gold a good investment?</a>
+</li>
+<li class=" ">
+<a href="/info/how-to-buy-gold/when-to-buy-gold/" title="Best time to buy gold?">Best time to buy gold?</a>
+</li>
+<li class=" ">
+<a href="/info/how-to-buy-gold/why-buy-physical-gold/" title="Why physical gold?">Why physical gold?</a>
+</li>
+<li class=" ">
+<a href="/info/how-to-buy-gold/gold-bars-gold-coins/" title="Gold bars vs coins?">Gold bars vs coins?</a>
+</li>
+<li class=" ">
+<a href="/info/how-to-buy-gold/buy-silver-buy-gold/" title="Gold vs Silver">Gold vs Silver</a>
+</li>
+<li class=" ">
+<a href="/info/gold-silver-ratio/" title="Gold - Silver Ratio explained">Gold - Silver Ratio explained</a>
+</li>
+<li class=" ">
+<a href="/info/how-to-buy-gold/vat-on-silver-gold/" title="VAT on bullion">VAT on bullion</a>
+</li>
+<li class=" ">
+<a href="/info/how-to-buy-gold/paying-capital-gains-tax-on-gold/" title="CGT on bullion">CGT on bullion</a>
+</li>
+<li class=" ">
+<a href="/info/legal-tender/" title="Legal tender coins">Legal tender coins</a>
+</li>
+<li class=" ">
+<a href="/info/top-5-gold-investments/" title="Top 5 Gold Investments">Top 5 Gold Investments</a>
+</li>
+<li class=" ">
+<a href="/info/top-5-silver-investments/" title="Top 5 Silver Investments">Top 5 Silver Investments</a>
+</li>
+<li class=" ">
+<a href="/info/gold-vs-isa/" title="Gold vs ISAs">Gold vs ISAs</a>
+</li>
+<li class=" ">
+<a href="/info/gold-vs-buy-to-let/" title="Gold vs Buy-to-Let">Gold vs Buy-to-Let</a>
+</li>
+<li class=" ">
+<a href="/info/gold-vs-ftse-100/" title="Gold vs FTSE 100">Gold vs FTSE 100</a>
+</li>
+<li class=" ">
+<a href="/info/gold-vs-bitcoin/" title="Gold vs Bitcoin">Gold vs Bitcoin</a>
+</li>
+<li class=" ">
+<a href="/info/how-to-buy-gold/where-to-buy-gold/" title="Where to buy gold?">Where to buy gold?</a>
+</li>
+<li class=" ">
+<a href="/info/why-buy-from-bullion-by-post/" title="Why buy from us?">Why buy from us?</a>
+</li>
+<li class=" ">
+<a href="/info/where-to-sell-gold/" title="Where to sell gold?">Where to sell gold?</a>
+</li>
+<li class=" ">
+<a href="/info/coin-shops/" title="Coin Shops">Coin Shops</a>
+</li>
+<li class=" ">
+<a href="/info/gold-price-forecasts/" title="Gold Price Forecasts">Gold Price Forecasts</a>
+</li>
+<li class=" ">
+<a href="/info/gold-production-by-country/" title="Top 10 Gold Producers">Top 10 Gold Producers</a>
+</li>
+<li class=" ">
+<a href="/info/gold-reserves-by-country/" title="Top 10 Gold Reserves">Top 10 Gold Reserves</a>
+</li>
+<li class=" ">
+<a href="/info/gold-britannia-vs-sovereign/" title="Gold Britannia vs Sovereign">Gold Britannia vs Sovereign</a>
+</li>
+<li class=" ">
+<a href="/info/britannia-coin-design/" title="Britannia coin designs">Britannia coin designs</a>
+</li>
+<li class=" ">
+<a href="/info/sovereign-coin-design/" title="Sovereign coin designs">Sovereign coin designs</a>
+</li>
+<li class=" ">
+<a href="/info/sovereign-mintages" title="Sovereign Mintages">Sovereign Mintages</a>
+</li>
+<li class=" ">
+<a href="/info/sovereign-mint-marks/" title="Sovereign mint marks">Sovereign mint marks</a>
+</li>
+<li class=" ">
+<a href="/info/british-coin-specifications/" title="British coin specs">British coin specs</a>
+</li>
+<li class=" ">
+<a href="/info/what-is-a-proof-coin/" title="What is a proof coin?">What is a proof coin?</a>
+</li>
+<li class=" ">
+<a href="/info/royal-mint-bullion/" title="Royal Mint bullion">Royal Mint bullion</a>
+</li>
+<li class=" ">
+<a href="/info/queens-beasts/" title="The Queen&#39;s Beasts">The Queen&#39;s Beasts</a>
+</li>
+<li class=" ">
+<a href="/info/shengxiao-collection/" title="Royal Mint lunar coins">Royal Mint lunar coins</a>
+</li>
+
+<li class=" ">
+<a href="/info/gold-refiners/" title="Bullion Refiners">Bullion Refiners</a>
+</li>
+<li class=" ">
+<a href="/info/british-mints/" title="British coin mints">British coin mints</a>
+</li>
+<li class=" ">
+<a href="/info/krugerrand/" title="Krugerrands">Krugerrands</a>
+</li>
+<li class=" ">
+<a href="/info/gold-tola-bars" title="Gold Tola - India &amp; Pakistan">Gold Tola - India &amp; Pakistan</a>
+</li>
+<li class=" ">
+<a href="/info/jewellery" title="The Fine Jewellery Company">The Fine Jewellery Company</a>
+</li>
+<li class=" ">
+<a href="/index/" title="Bullion Index">Bullion Index</a>
+</li>
+</ul>
+</div>
+</div>
+<select class="form-control nav-select visible-xs">
+<option value="/info/how-to-buy/">
+How to Buy?
+</option>
+<option value="/info/payment-options/">
+Payment Options
+</option>
+<option value="/info/delivery-options/">
+Delivery Options
+</option>
+<option value="/info/how-to-buy-gold/storing-gold/">
+Gold Storage
+</option>
+<option value="/allocated-storage/">
+Storage at Brink's
+</option>
+<option value="/info/how-to-buy-gold/" selected>
+Gold Investment Guide
+</option>
+<option value="/info/how-to-buy-gold/why-buy-gold/">
+Why buy gold?
+</option>
+<option value="/info/is-gold-a-good-investment/">
+Is gold a good investment?
+</option>
+<option value="/info/how-to-buy-gold/when-to-buy-gold/">
+Best time to buy gold?
+</option>
+<option value="/info/how-to-buy-gold/why-buy-physical-gold/">
+Why physical gold?
+</option>
+<option value="/info/how-to-buy-gold/gold-bars-gold-coins/">
+Gold bars vs coins?
+</option>
+<option value="/info/how-to-buy-gold/buy-silver-buy-gold/">
+Gold vs Silver
+</option>
+<option value="/info/gold-silver-ratio/">
+Gold - Silver Ratio explained
+</option>
+<option value="/info/how-to-buy-gold/vat-on-silver-gold/">
+VAT on bullion
+</option>
+<option value="/info/how-to-buy-gold/paying-capital-gains-tax-on-gold/">
+CGT on bullion
+</option>
+<option value="/info/legal-tender/">
+Legal tender coins
+</option>
+<option value="/info/top-5-gold-investments/">
+Top 5 Gold Investments
+ </option>
+<option value="/info/top-5-silver-investments/">
+Top 5 Silver Investments
+</option>
+<option value="/info/gold-vs-isa/">
+Gold vs ISAs
+</option>
+<option value="/info/gold-vs-buy-to-let/">
+Gold vs Buy-to-Let
+</option>
+<option value="/info/gold-vs-ftse-100/">
+Gold vs FTSE 100
+</option>
+<option value="/info/gold-vs-bitcoin/">
+Gold vs Bitcoin
+</option>
+<option value="/info/how-to-buy-gold/where-to-buy-gold/">
+Where to buy gold?
+</option>
+<option value="/info/why-buy-from-bullion-by-post/">
+Why buy from us?
+</option>
+<option value="/info/where-to-sell-gold/">
+Where to sell gold?
+</option>
+<option value="/info/coin-shops/">
+Coin Shops
+</option>
+<option value="/info/gold-price-forecasts/">
+Gold Price Forecasts
+</option>
+<option value="/info/gold-production-by-country/">
+Top 10 Gold Producers
+</option>
+<option value="/info/gold-reserves-by-country/">
+Top 10 Gold Reserves
+</option>
+<option value="/info/gold-britannia-vs-sovereign/">
+Gold Britannia vs Sovereign
+</option>
+<option value="/info/britannia-coin-design/">
+Britannia coin designs
+</option>
+<option value="/info/sovereign-coin-design/">
+Sovereign coin designs
+</option>
+<option value="/info/sovereign-mintages">
+Sovereign Mintages
+</option>
+<option value="/info/sovereign-mint-marks/">
+Sovereign mint marks
+</option>
+<option value="/info/british-coin-specifications/">
+British coin specs
+</option>
+<option value="/info/what-is-a-proof-coin/">
+What is a proof coin?
+</option>
+<option value="/info/royal-mint-bullion/">
+Royal Mint bullion
+</option>
+<option value="/info/queens-beasts/">
+The Queen&#39;s Beasts
+</option>
+<option value="/info/shengxiao-collection/">
+Royal Mint lunar coins
+</option>
+<option value="/info/gold-refiners/">
+Bullion Refiners
+</option>
+<option value="/info/british-mints/">
+British coin mints
+</option>
+<option value="/info/krugerrand/">
+Krugerrands
+</option>
+<option value="/info/gold-tola-bars">
+Gold Tola - India &amp; Pakistan
+</option>
+
+<option value="/info/jewellery">
+The Fine Jewellery Company
+</option>
+<option value="/index/">
+Bullion Index
+</option>
+</select>
+<div class="small-box left-nav-categories hidden-xs">
+<div class="inner-box grey-background title"><a href="/">Buy Bullion</a></div>
+<div class="inner-box">
+<ul>
+<li class="menu-special-offers"><a href="/special-offers/" title="Special Offers">Special Offers</a></li>
+<li class="menu-new-bullion-products"><a href="/new-bullion-products/" title="New Products">New Products</a></li>
+<li class="menu-gold-bars"><a href="/gold-bars/" title="Gold Bars">Gold Bars</a></li>
+<li class="menu-gold-coins"><a href="/gold-coins/" title="Gold Coins">Gold Coins</a></li>
+<li class="menu-proof-sets"><a href="/proof-sets/" title="Gold Proof Coins &amp; Sets">Gold Proof Coins &amp; Sets</a></li>
+<li class="menu-silver-bars"><a href="/silver-bars/" title="Silver Bars">Silver Bars</a></li>
+<li class="menu-silver-coins"><a href="/silver-coins/" title="Silver Coins">Silver Coins</a></li>
+<li class="menu-vat-free"><a href="/vat-free/" title="VAT-Free Silver">VAT-Free Silver</a></li>
+<li class="menu-gifts"><a href="/gifts/" title="Gifts">Gifts</a></li>
+<li class="menu-collectible-coins"><a href="/collectible-coins/" title="Collectible Coins">Collectible Coins</a></li>
+<li class="menu-platinum-bars"><a href="/platinum-bars/" title="Platinum Bars">Platinum Bars</a></li>
+<li class="menu-platinum-coins"><a href="/platinum-coins/" title="Platinum Coins">Platinum Coins</a></li>
+<li class="menu-palladium-bars"><a href="/palladium-bars/" title="Palladium Bars">Palladium Bars</a></li>
+<li class="menu-bullion-refiners"><a href="/bullion-refiners/" title="Bullion Refiners">Bullion Refiners</a></li>
+<li class="menu-accessories"><a href="/accessories/" title="Accessories">Accessories</a></li>
+<li class="menu-ladies-jewellery">
+<a href="https://www.thefinejewellerycompany.com/" title="Ladies' Jewellery" target="_blank">Ladies' Jewellery</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="left-nav-social-icons hidden-xs">
+<a href="https://www.facebook.com/bullionbypost" target="_blank" rel="nofollow" class="inline-block facebook"></a>
+<a href="https://twitter.com/bullionbypost" target="_blank" rel="nofollow" class="inline-block twitter"></a>
+<div class="hidden-lg hidden-xs"></div>
+<a href="https://www.linkedin.com/company/bullion-by-post" target="_blank" rel="nofollow" class="inline-block linkedin"></a>
+</div>
+<div class="small-panel hidden-xs">
+<p><span style="font-size: small;"><img /><a href="/special-offers/"><img style="max-height: 28px;" src="/media/uploads/pages/images/2019/11/26/Howtobuygold.png" /></a></span></p>
+<h5 style="text-align: center;"><span style="color: #2a2a2a;"><a style="color: #2a2a2a;" href="/info/how-to-buy-gold/"><strong>The ultimate guide to </strong></a></span></h5>
+<h5 style="text-align: center;"><a href="/info/how-to-buy-gold/"><span style="color: #2a2a2a;"><strong>investing&nbsp;in</strong></span><strong><span style="color: #000000;"><span style="color: #000000;">&nbsp;</span><span style="color: #dab336;">Gold</span></span></strong></a><br /><a title="How to Buy Gold? The Ultimate Guide to Investing in Gold" href="https://www.bullionbypost.co.uk/info/how-to-buy-gold/"><img style="display: block; margin-left: auto; margin-right: auto;" title="How To Buy Gold" src="/media/uploads/pages/images/2014/08/19/howtobuygold.png" alt="How To Buy Gold" width="146" height="107" /></a><a title="How to Buy Gold? The Ultimate Guide to Investing in Gold" href="https://www.bullionbypost.co.uk/info/how-to-buy-gold/"><img style="display: block; margin-left: auto; margin-right: auto;" /><span style="font-size: small;"><img /></span></a><a href="/info/how-to-buy-gold/"><img style="max-width: 154px;" src="/media/uploads/pages/images/2019/11/26/Read_Guide.png" /></a></h5>
+</div>
+<div class="small-panel hidden-xs">
+<p><span style="font-size: small;"><img /><a href="/collectible-coins/"><img style="max-height: 28px;" src="/media/uploads/pages/images/2019/11/26/BullionByPost.png" /><br /></a></span></p>
+<h5 style="text-align: center;"><span style="font-size: 11pt;"><a href="/collectible-coins/"><strong><span style="color: #000000;"><span style="color: #2a2a2a;">Rare&nbsp;and Collectible</span></span></strong><span style="color: #2a2a2a;"><strong>&nbsp;</strong></span></a></span></h5>
+<h5 style="text-align: center;"><a href="/collectible-coins/"><strong><span style="color: #000000;"><span style="color: #dab336;">Gold</span><span style="color: #2a2a2a;"> and&nbsp;</span><span style="color: #808080;">Silver</span>&nbsp;<span style="color: #2a2a2a;">Coins</span></span></strong></a><br /><br /></h5>
+<p><a title="Collectible Coins" href="/collectible-coins/"><img style="display: block; margin-left: auto; margin-right: auto;" title="Collectible Gold Coins" src="/media/uploads/pages/images/2019/11/26/Coins.png" alt="Collectible Coins" width="146" height="auto" /></a></p>
+<p><span style="font-size: small;"><img /><a href="/collectible-coins/"><img style="max-width: 157px;" src="/media/uploads/pages/images/2019/11/26/Numismatic_Coins.png" /></a></span></p>
+</div>
+<div class="small-panel hidden-xs">
+<p><span style="font-size: small;"><img /><a href="/gold-news/"><img style="max-height: 28px;" src="/media/uploads/pages/images/2019/11/26/Gold_news.png" /><br /></a></span></p>
+<h5 style="text-align: center;"><strong><span style="color: #000000;"><a style="color: #000000;" title="Gold News" href="https://www.bullionbypost.co.uk/gold-news/"><span style="color: #2a2a2a;">The latest</span> <span style="color: #dab336;">Gold</span> <span style="color: #2a2a2a;">and</span>&nbsp;<span style="color: #808080;">Silver<br /></span><span style="color: #2a2a2a;">news and commentary</span></a></span></strong></h5>
+<p><a title="Gold News" href="https://www.bullionbypost.co.uk/gold-news/"><img style="display: block; margin-left: auto; margin-right: auto;" title="News" src="/media/uploads/pages/images/2019/02/01/shutterstock_117984163.jpg" alt="Gold News" width="146" height="107" /></a></p>
+<p><span style="font-size: small;"><img /><a href="/gold-news/"><img style="max-width: 125px;" src="/media/uploads/pages/images/2019/11/26/Read_Gold_News.png" /></a></span></p>
+</div>
+</div>
+</div>
+<div class="col-md-10 col-sm-9">
+<div class="two-columns-left-content">
+<div id="infopage">
+<h1>How to Invest in Gold Bullion? The Ultimate Guide to Gold Investment</h1>
+<hr>
+<html>
+<body>
+<p style="text-align: left;">
+<img alt="How to Buy Gold" class="img-responsive" height="61" src="https://www.bullionbypost.co.uk/media/uploads/pages/images/2013/03/08/gold_bars_coins_shop1.jpg" style="float: right;" title="How to Buy Gold" width="" />
+For centuries savvy investors have been aware of the importance of gold as part of
+<br />
+a well-balanced portfolio. In addition to offering wealth diversification, gold is a world-
+<br />
+renowned safe haven for investors, offering the ultimate insurance and protection
+<br />
+against turbulent economic times.
+</p>
+<p>
+History illustrates that gold is a timeless asset, not only proving to be a successful
+<br />
+preserver of wealth, but high gold prices and record demand has ensured it has
+<br />
+outperformed many other forms of investment.
+</p>
+<p>
+According to the World Gold Council,
+<a href="https://www.bullionbypost.co.uk/gold-news/2019/january/31/world-gold-council-annual-gold-demand-4-2018/" rel="noopener" target="_blank">
+Central Bank gold buying was at its highest level
+<br />
+for 50 years in 2018,
+</a>
+with the global economic slowdown weighing on the minds of
+<br />
+financial experts.
+<a href="https://www.bullionbypost.co.uk/gold-news/2019/january/28/gold-2018-down-dollars-record-breaking-year-most-currencies/" rel="noopener" target="_blank">
+Gold did so well that it broke price records in most currencies, with a
+<br />
+staggering 72 nations reporting peak gold price,
+</a>
+and the likes of the Pound, Euro, Yuan
+<br />
+and Swiss Franc near all-time highs.
+</p>
+<p>
+Investor demand for gold grew by 4% last year. Despite the Chinese economy slowing
+<br />
+down due to pressure on exports to the United States, China's demand for gold stayed
+<br />
+roughly even from the previous year, while demand in other areas such as the UK and
+<br />
+South-East Asia grew by up to 12%.
+</p>
+<p>
+2019 saw geopolitical tension, and economic slowdown drive the gold price to all-time
+<br />
+highs in a number of country's, including the UK. The new Sterling record of £1,282.69
+<br />
+shows that gold demand is still high. Recession became a real risk in 2019, with large
+<br />
+economies including the UK and Germany on the brink of recession.
+</p>
+<p>
+2020 has also begun with further uncertainty, keeping the gold price high. A near-miss
+<br />
+war between the US and Iran saw prices spike in the new year. The outbreak of the latest
+<br />
+coronavirus has also reduced economic forecasts for 2020, and reintroduced the risk of
+<br />
+recession once more.
+</p>
+<p>
+View our annual
+<strong>
+<a href="/info/gold-price-forecasts/">
+gold price forecast
+</a>
+</strong>
+for our analysis on the prospects for gold in 2020.
+</p>
+<p>
+</p>
+<hr />
+<p>
+<img class="img-responsive" src="https://www.bullionbypost.co.uk/media/uploads/pages/images/2019/03/15/2019_Gold_Krugerrand_reverse-2_-_250px.jpg" style="float: right;" width="" />
+</p>
+<p style="text-align: left;">
+<strong style="font-size: medium; line-height: 1.5em;">
+How to Buy Gold?
+</strong>
+</p>
+<p>
+The guide provides essential reading for all investors. If you've never bought gold before
+<br />
+then we can help explain how to invest in gold for beginners. Even seasoned investors
+<br />
+can benefit though, and this guide is packed with must-read information and advice on
+<br />
+how to invest in gold coins and bars, including
+<a href="/info/how-to-buy-gold/why-buy-gold/">
+why buy gold,
+</a>
+<a href="/info/how-to-buy-gold/where-to-buy-gold/">
+where to buy gold
+</a>
+and
+<br />
+<a href="/info/how-to-buy-gold/storing-gold/">
+storing gold.
+</a>
+</p>
+<p>
+The guide also looks into
+<a href="/info/how-to-buy-gold/gold-bars-gold-coins/">
+bars vs coins,
+</a>
+<a href="/info/how-to-buy-gold/buy-silver-buy-gold/" title="Gold Versus Silver">
+gold vs silver,
+</a>
+<a href="/info/how-to-buy-gold/paying-capital-gains-tax-on-gold/">
+capital gains tax on bullion
+</a>
+and the
+<br />
+<a href="/info/how-to-buy-gold/why-buy-physical-gold/">
+benefits of owning physical gold
+</a>
+over paper and electronic gold, plus much more.
+</p>
+<p>
+<span style="color: #ffffff;">
+.
+</span>
+</p>
+<hr />
+<p>
+<strong style="font-size: medium; line-height: 1.5em;">
+Why Invest in Gold?
+</strong>
+</p>
+<p>
+In order to know if gold is a good investment, it is important to understand why people buy
+<br />
+gold. In times of economic uncertainty and instability, buying gold makes more sense than
+<br />
+other assets. With confidence in the banking system and worldwide economy at an all-time
+<br />
+low, gold bullion could be the ultimate insurance and should act as an essential part of
+<br />
+everybody’s investment portfolio.
+<br />
+<br />
+With the famous yellow metal in greater demand than ever, there are many reasons why
+<br />
+people should buy gold. Owning gold could be the ultimate way to preserve your wealth, and
+<br />
+possibly make a healthy return in these uncertain times. It’s an age old question which people
+<br />
+have been asking for centuries – where is my money really safe? And more and more people
+<br />
+are now choosing the oldest answer:
+<strong>
+GOLD.
+</strong>
+</p>
+<p>
+<strong>
+<a href="/info/how-to-buy-gold/why-buy-gold/">
+&gt; Read more about the benefits of buying gold.
+</a>
+</strong>
+</p>
+<p>
+<span style="color: #ffffff;">
+.
+</span>
+</p>
+<hr />
+<p>
+<strong style="font-size: medium; line-height: 1.5em;">
+Why Buy Physical Gold? Physical Gold Vs ETFs
+</strong>
+</p>
+<p>
+<strong style="font-size: medium; line-height: 1.5em;">
+<img alt="How to Invest in Gold Bullion - Gold Bars" class="img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive" height="217" src="/media/uploads/pages/images/2012/12/17/12.5kg.jpg" style="float: right;" title="How to Invest in Gold Bullion - Gold Bars" width="" />
+</strong>
+</p>
+<p style="text-align: left;">
+As the old saying goes;
+<strong>
+if you don't hold it, you don't
+</strong>
+<strong>
+own it.
+</strong>
+There really are numerous
+<br />
+benefits of physically holding your gold in your hands, as opposed to buying electronic
+<br />
+gold (ETF) or paper gold. In these unpredictable economic times of banking instability,
+<br />
+low interest rates, underperforming currency markets, volatile stocks and repeated
+<br />
+rounds of printing money, gold offers a welcome safeguard to the turbulence.
+<br />
+<br />
+However this is not just any form of gold, but physical gold. Physical gold is a timeless
+<br />
+asset which will always have a value and always lasts the test of time. Holding physical
+<br />
+gold bars and/or gold coins provides the ultimate control and insurance for your wealth
+<br />
+against financial crisis in an underperforming wider economy.
+</p>
+<p>
+<strong>
+<a href="/info/how-to-buy-gold/why-buy-physical-gold/">
+&gt; Read more about the benefits of owning physical gold.
+</a>
+</strong>
+</p>
+<p>
+<span style="color: #ffffff;">
+.
+</span>
+</p>
+<hr />
+<p>
+<strong style="font-size: medium; line-height: 1.5em;">
+Where to Buy Gold?
+</strong>
+</p>
+<p>
+Research is everything. Your decision to buy gold online wouldn’t have been taken lightly and
+<br />
+should be backed by your own research. Much the same, when it comes to selecting your
+<br />
+chosen bullion dealer, again research is vital. The internet is the best place to conduct your
+<br />
+research. The internet holds information about the impartial experiences, opinions and
+<br />
+recommendations of millions of people all around the world. It sounds obvious, but why not
+<br />
+start your research by simply typing in the bullion dealers brand name into Google.co.uk. The
+<br />
+internet really is the world's largest open forum in which companies have no control. It will
+<br />
+quickly become apparent if a bullion dealer has a negative online reputation, in which case
+<br />
+they should be avoided at all costs.
+</p>
+<p>
+<strong>
+<a href="/info/how-to-buy-gold/where-to-buy-gold/">
+&gt; Read more about where to buy gold.
+</a>
+</strong>
+</p>
+<p>
+<span style="color: #ffffff;">
+.
+</span>
+</p>
+<hr />
+<p>
+<strong style="font-size: medium; line-height: 1.5em;">
+When to Invest in Gold?
+</strong>
+</p>
+<p>
+Looking back at historical data; in hindsight it is easy to identify 2005/06 as a great time to buy
+<br />
+gold bullion, before the constant rises when the price of gold stood at just £250 per troy ounce.
+<br />
+We are often asked whether it's a good time to invest in gold, and whether the price will rise?
+</p>
+<p>
+Unfortunately, there's no exact science to knowing when to buy gold, but there are lots of effective
+<br />
+and timeless techniques and indicators that most successful investors use to help them spot the
+<br />
+right time to buy gold.
+</p>
+<p>
+<strong>
+<a href="/info/how-to-buy-gold/when-to-buy-gold/">
+&gt; Read more about the best time to buy gold.
+</a>
+</strong>
+</p>
+<p>
+<span style="color: #ffffff;">
+.
+</span>
+</p>
+<hr />
+<p style="text-align: left;">
+<img class="img-responsive" src="https://www.bullionbypost.co.uk/media/uploads/pages/images/2019/03/15/2019-britannia-1oz-gold-bullion-coin-reverse_-_250px.jpg" style="float: right;" width="" />
+</p>
+<p style="text-align: left;">
+<strong style="font-size: medium; line-height: 1.5em;">
+Gold Bars Vs Gold Coins?
+</strong>
+</p>
+<p style="text-align: left;">
+Whether you’re new to bullion investment or not, deciding whether to invest in bullion bars
+<br />
+or bullion coins should take some consideration. Before making this decision, it would be
+<br />
+advisable that you conduct your research as there is no definitive right or wrong answer, it
+<br />
+will vary depending on the needs and circumstances of the individual investor. However,
+<br />
+as when making any other investment there are several factors to consider including: the
+<br />
+value of your investment and the product premiums, how long you plan on holding your gold,
+<br />
+how you will store it, capital gains tax (CGT) and how you plan on realising the value of your
+<br />
+investment.
+</p>
+<p>
+<strong>
+<a href="/info/how-to-buy-gold/gold-bars-gold-coins/">
+&gt; Read more about gold bars versus coins.
+</a>
+</strong>
+</p>
+<p>
+<span style="color: #ffffff;">
+.
+</span>
+</p>
+<hr />
+<p>
+</p>
+<p style="text-align: left;">
+<strong style="font-size: medium; line-height: 1.5em;">
+Should I Buy Gold &amp; Silver?
+</strong>
+</p>
+<p>
+Many investors spend time deciding whether to buy gold or buy silver, however the savviest
+<br />
+investors own both. Whereas gold could offer the ultimate insurance and protection against
+<br />
+uncertain economic times, silver is a more speculative investment. Despite gold and silver
+<br />
+both being commonly invested precious metals, silver is an entirely different investment which
+<br />
+can realise substantial profits despite the initial VAT outlay. It’s because of these differences
+<br />
+that owning both gold and silver together can be of benefit.
+</p>
+<p>
+<strong>
+<a href="/info/how-to-buy-gold/buy-silver-buy-gold/">
+&gt; Read more about the benefits of owning silver.
+</a>
+</strong>
+</p>
+<p>
+<span style="color: #ffffff;">
+.
+</span>
+</p>
+<hr />
+<p>
+<img class="img-responsive" src="https://www.bullionbypost.co.uk/media/uploads/pages/images/2019/03/15/2019_Sovereign_reverse-250px.jpg" style="float: right;" width="" />
+</p>
+<p style="text-align: left;">
+<strong style="font-size: medium; line-height: 1.5em;">
+Do I Pay Capital Gains Tax on Gold?
+</strong>
+</p>
+<p>
+Capital Gains Tax - or CGT - is a tax on the gains or profit you make when you sell, give away
+<br />
+or otherwise dispose of something. It applies to assets that you own, such as bullion, shares
+<br />
+or property. There's a tax-free allowance of £12,000 (2019/20) and some additional relief that
+<br />
+may reduce your Capital Gains Tax bill.
+</p>
+<p>
+Most bullion investors will never have to pay this tax due to the size of their investment and
+<br />
+many other investors choose to only buy tax-free British gold coins which are exempt from CGT;
+<br />
+such as gold Sovereign coins and gold Britannia coins, however, it is important that investors
+<br />
+check first, so they know where they stand.
+</p>
+<p>
+<strong>
+<a href="/info/how-to-buy-gold/paying-capital-gains-tax-on-gold/">
+&gt; Read more about paying CGT on gold.
+</a>
+</strong>
+</p>
+<p>
+<span style="color: #ffffff;">
+.
+</span>
+</p>
+<hr />
+<p>
+<img class="img-responsive" src="https://www.bullionbypost.co.uk/media/uploads/pages/images/2019/03/15/Umicore_500g_gold_bar.jpg" style="float: right;" width="" />
+</p>
+<p style="text-align: left;">
+<strong style="font-size: medium; line-height: 1.5em;">
+Is Bullion Subject to VAT?
+</strong>
+</p>
+<p>
+The good news is investment grade gold is VAT-free. This includes all the gold bullion bars and
+<br />
+coins on our website. This helps maximise your money, allowing you to put all of your budget into
+<br />
+the initial outlay.
+</p>
+<p>
+Unlike gold,
+<strong>
+VAT is payable
+</strong>
+on silver at 20% making silver a more long term, speculative investment.
+<br />
+However, due to the volatile nature of the silver price, returns are often quickly realised. If you are
+<br />
+VAT registered and think you may be able to claim your VAT back, then we advise you speak to your
+<br />
+accountant.
+</p>
+<p>
+<strong>
+<a href="/info/how-to-buy-gold/vat-on-silver-gold/">
+&gt; Read more about paying VAT on silver.
+</a>
+</strong>
+</p>
+<p>
+<span style="color: #ffffff;">
+<strong>
+.
+</strong>
+</span>
+</p>
+<p>
+<span style="color: #ffffff;">
+.
+</span>
+</p>
+<hr />
+<p>
+<strong style="font-size: medium; line-height: 1.5em;">
+Where Should I Store my Gold?
+</strong>
+</p>
+<p>
+The physical possession and control of your bullion is one of the main benefits of investing in gold
+<br />
+bullion bars and coins over electronic or paper gold, however you must consider where to store
+<br />
+your gold. There really is no one correct answer, the truth is you can do with it as you please and
+<br />
+can store it where you like; it really is down to personal preference. Storing gold bullion really isn’t
+<br />
+anything new; people have been successfully storing gold and silver bullion for centuries and it is
+<br />
+particularly common in Germany and India.
+<br />
+<br />
+On a basic level there are four different options; allocated storage, a bank safety deposit box, a home
+<br />
+safe or be a bit more creative. Although allocated storage with BullionByPost is the most secure, all
+<br />
+four options offer a variety of pros and cons, these should be investigated before making a decision
+<br />
+as to how to store your gold bars and gold coins.
+</p>
+<p>
+<strong>
+<a href="/info/how-to-buy-gold/storing-gold/">
+&gt; Read more about storing your gold bullion.
+</a>
+</strong>
+</p>
+<p>
+<span style="color: #ffffff;">
+.
+</span>
+</p>
+<hr />
+<p>
+<strong style="font-size: medium;">
+Why Buy Gold Online at BullionByPost?
+</strong>
+</p>
+<div>
+<img alt="LBMA Approved Refiners" class="img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive img-responsive" height="119" src="/media/uploads/pages/images/2014/03/14/auth_dist.jpg" style="float: right;" title="LBMA Approved Refiners" width="" />
+</div>
+<div>
+<span style="font-size: 11pt;">
+BullionByPost is the largest and most trusted bullion dealer
+</span>
+<span style="font-size: 11pt;">
+in the UK
+<br />
+dispatching thousands of parcels for free fully
+</span>
+<span style="font-size: 11pt;">
+insured delivery
+<br />
+every month. BullionByPost is a
+</span>
+<span style="font-size: 11pt;">
+fully authorised distributor of London
+<br />
+Bullion Market Approved
+</span>
+<span style="font-size: 11pt;">
+(LMBA) Umicore, Heraeus and Metalor bars as
+<br />
+well as an
+</span>
+<span style="font-size: 11pt;">
+authorised distributor for the British Royal Mint.
+</span>
+</div>
+<div>
+<p>
+<span style="color: #ffffff;">
+.
+</span>
+</p>
+<hr />
+<p>
+<span style="font-size: medium;">
+<strong>
+How to Buy Gold Online at BullionByPost?
+<br />
+</strong>
+</span>
+</p>
+<p>
+Buying gold online at BullionByPost is quick, simple and secure. You can create and
+<a href="/accounts/login/">
+register your account online
+</a>
+in as little as two minutes. Once your account is set up, you can buy gold and silver bullion online, 24 hours a day at the click of a button. Your online account will also allow you to track the performance of your gold investment against the current price of gold, as well as providing you with the latest product news and a safe place to store your invoices. With a comprehensive range of gold and silver bullion products available at low margins, buying gold in the UK has never been so safe and easy.
+</p>
+<p style="text-align: center;">
+<span style="color: #ffffff;">
+.
+</span>
+</p>
+<p style="text-align: center;">
+<img class="img-responsive" src="https://www.bullionbypost.co.uk/media/uploads/pages/images/2018/07/26/BBP_gold_basket_8pCYq5X.jpg" width="" />
+</p>
+</div>
+<div style="text-align: center;">
+<span style="font-size: 9pt;">
+<strong>
+An example of the BullionByPost checkout process. Prices are subject to live changes.
+</strong>
+</span>
+</div>
+<div>
+<span style="color: #ffffff;">
+.
+</span>
+</div>
+<div>
+<strong>
+Register your FREE online Account today and receive a host of benefits
+</strong>
+including our Gold Price Alert Service, 24 hour access to buy gold quickly and safely, access to your invoices and full order history to monitor your investment performance, monthly insight and offers direct to your inbox, plus much more.
+<a href="/accounts/login/">
+Click here to register your FREE online account today.
+</a>
+<br />
+<span style="color: #ffffff;">
+.
+</span>
+</div>
+<div>
+<strong>
+<div class="row">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="medium-box category-panel">
+<div class="image">
+<a href="/gold-bars/">
+<img src="https://www.bullionbypost.co.uk/media/cache-bbp/96/be/96be332e2fde2592ef110719c1cedef5.jpg" alt="Gold Bars" title="Gold Bars" class="center-block img-responsive">
+</a>
+</div>
+<div class="inner-box grey-background">
+<p class="name">
+<a href="/gold-bars/">Gold Bars</a>
+</p>
+<p class="stock-message"><small>In Stock</small></p>
+<div class="bottom">
+<p class="from" data-price-product-id="3691">
+<small>from</small> <span data-price-type="price-inc-vat">&pound;56.40</span>
+</p>
+<a class="btn btn-primary center-block" href="/gold-bars/">View</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="medium-box category-panel">
+<div class="image">
+<a href="/gold-coins/">
+<img src="https://www.bullionbypost.co.uk/media/cache-bbp/7e/6c/7e6c031ed311b8b1f5bd01ea16ce5b1a.jpg" alt="Gold Coins" title="Gold Coins" class="center-block img-responsive">
+</a>
+</div>
+<div class="inner-box grey-background">
+<p class="name">
+<a href="/gold-coins/">Gold Coins</a>
+</p>
+<p class="stock-message"><small>In Stock</small></p>
+<div class="bottom">
+<p class="from" data-price-product-id="5694">
+<small>from</small> <span data-price-type="price-inc-vat">&pound;45.00</span>
+</p>
+<a class="btn btn-primary center-block" href="/gold-coins/">View</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="medium-box category-panel">
+<div class="image">
+<a href="/silver-bars/">
+<img src="https://www.bullionbypost.co.uk/media/cache-bbp/a3/c7/a3c71d365141ba7be32f08e2ab45ecaa.jpg" alt="Silver Bars" title="Silver Bars" class="center-block img-responsive">
+</a>
+</div>
+<div class="inner-box grey-background">
+<p class="name">
+<a href="/silver-bars/">Silver Bars</a>
+</p>
+<p class="stock-message"><small>In Stock</small></p>
+<div class="bottom">
+<p class="from" data-price-product-id="1219">
+<small>from</small> <span data-price-type="price-inc-vat">&pound;8.52</span>
+</p>
+<a class="btn btn-primary center-block" href="/silver-bars/">View</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="medium-box category-panel">
+<div class="image">
+<a href="/silver-coins/">
+<img src="https://www.bullionbypost.co.uk/media/cache-bbp/fc/fe/fcfe2cd9dd6916be641d961ab1f9aa10.jpg" alt="Silver Coins" title="Silver Coins" class="center-block img-responsive">
+</a>
+</div>
+<div class="inner-box grey-background">
+<p class="name">
+<a href="/silver-coins/">Silver Coins</a>
+</p>
+<p class="stock-message"><small>In Stock</small></p>
+<div class="bottom">
+<p class="from" data-price-product-id="6218">
+<small>from</small> <span data-price-type="price-inc-vat">&pound;11.40</span>
+</p>
+<a class="btn btn-primary center-block" href="/silver-coins/">View</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</strong>
+</div>
+<div>
+<span style="color: #ffffff;">
+.
+</span>
+</div>
+<div>
+<div>
+<hr />
+<p>
+<strong style="line-height: 1.5em;">
+Related Links:
+</strong>
+<span style="line-height: 1.5em;">
+If you have any questions about investing in gold, please feel free to contact our knowledgeable and friendly team on
+</span>
+<strong style="line-height: 1.5em;">
+0121 634 8060
+</strong>
+<span style="line-height: 1.5em;">
+who will be happy to talk your through any queries you may have. Alternatively, you can email us at
+</span>
+<a href="/cdn-cgi/l/email-protection#90e3f1fcf5e3d0f2e5fcfcf9fffef2e9e0ffe3e4bef3ffbee5fb" style="line-height: 1.5em;">
+<strong>
+<span class="__cf_email__" data-cfemail="cbb8aaa7aeb88ba9bea7a7a2a4a5a9b2bba4b8bfe5a8a4e5bea0">[email&#160;protected]</span>
+</strong>
+</a>
+<span style="line-height: 1.5em;">
+and we will get back to you as soon as possible.
+</span>
+</p>
+</div>
+<div>
+<p style="text-align: center;">
+<span style="color: #ffffff;">
+.
+</span>
+<br />
+<span style="font-size: 13pt;">
+<a href="/" title="Buy Gold Bullion">
+Buy Gold Bullion
+</a>
+|
+<a href="/gold-bars/" title="Buy Gold Bars">
+Buy Gold Bars
+</a>
+|
+<a href="/gold-coins/" title="Buy Gold Coins">
+Buy Gold Coins
+</a>
+|
+<a href="/silver-bars/" title="Buy Silver Bullion">
+Buy Silver
+</a>
+|
+<a href="/gold-coins/full-sovereign-gold-coin/" title="Buy Gold Sovereigns">
+Buy Gold Sovereigns
+</a>
+|
+<a href="/gold-price/" title="Gold Price">
+Gold Price
+</a>
+|
+ <a href="https://www.bullionbypost.co.uk/info/gold-price-forecasts/" title="Gold Price Forecasts">
+Gold Price Forecast
+</a>
+</span>
+</p>
+<p style="text-align: center;">
+<span style="font-size: 13pt;">
+View our
+<strong>
+Top 5
+</strong>
+<a href="/info/top-5-gold-investments/" title="Top 5 Gold Investments">
+Gold Investments
+</a>
+and our
+<strong>
+Top 5
+</strong>
+<a href="/info/top-5-silver-investments/" title="Top 5 Silver Investments">
+Silver Investments
+</a>
+</span>
+</p>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="da3096500e0c4db545a891a9-|49" defer=""></script></body>
+</html>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="grey-background">
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<a href="/">
+<div class="mobile-logo">
+<div>
+<img src="https://www.bullionbypost.co.uk/static/images/bbp-bars.png" alt="BullionByPost home">
+<p>Bullion<span class="gold">By</span>Post</p>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-2 col-xs-4">
+<div class="links">
+<p><strong class="column-title">Information</strong></p>
+<p><a href="/contact/">Contact Us</a></p>
+<p><a href="/info/faqs/">FAQs</a></p>
+<p><a href="/info/delivery-options/">Delivery Options</a></p>
+<p><a href="/info/payment-options/">Payment Options</a></p>
+<p><a href="/info/how-to-buy/">How to Buy</a></p>
+<p><a href="/info/how-to-buy-gold/">Buying Guide</a></p>
+<p><a href="/index/">Bullion Index</a></p>
+<p><a href="/refer-a-friend/">Refer a Friend</a></p>
+</div>
+</div>
+<div class="col-sm-2 col-xs-4">
+<div class="links">
+<p><strong class="column-title">About</strong></p>
+<p><a href="/info/about-us/">About Us</a></p>
+<p><a href="/info/careers/">Careers</a></p>
+<p><a href="/info/terms-and-conditions/">Terms &amp; Conditions</a></p>
+<p><a href="/info/privacy/">Privacy Policy</a></p>
+<p><a href="/info/acceptable-use/">Acceptable Use Policy</a></p>
+</div>
+</div>
+<div class="col-sm-2 col-xs-4">
+<div class="links">
+<p><strong class="column-title">Services</strong></p>
+<p><a href="/info/delivery-options/">Delivery</a></p>
+<p><a href="/allocated-storage/">Storage</a></p>
+<p><a href="/gold-pensions/">Pensions</a></p>
+<p><a href="/sell-to-us/">Selling</a></p>
+<p><a href="https://www.bullionbypost.ie/" target="_blank">BullionByPost Ireland</a></p>
+<p><a href="https://www.bullionbypost.fr/" target="_blank">BullionByPost France</a></p>
+<p><a href="https://www.bullionbypost.com/" target="_blank">BullionByPost USA</a></p>
+<p><a href="https://www.thejewellers.com/" target="_blank">The Jewellers</a></p>
+<p><a href="https://www.smartinstall.com/" target="_blank">Burglar Alarms</a></p>
+</div>
+</div>
+<div class="visible-xs col-xs-12"></div>
+<div class="col-md-2 col-md-offset-2 col-sm-2 hidden-xs">
+<p><strong class="column-title">Social Links</strong></p>
+<div>
+<a href="https://www.facebook.com/bullionbypost" target="_blank" rel="nofollow" class="inline-block facebook"></a>
+<a href="https://twitter.com/bullionbypost" target="_blank" rel="nofollow" class="inline-block twitter"></a>
+</div>
+ <div>
+<a href="https://www.linkedin.com/company/bullion-by-post" target="_blank" rel="nofollow" class="inline-block linkedin"></a>
+</div>
+</div>
+<div class="visible-xs col-xs-12">
+<p><strong class="column-title">Social Links</strong></p>
+<div>
+<a href="https://www.facebook.com/bullionbypost" target="_blank" rel="nofollow" class="inline-block facebook"></a>
+<a href="https://twitter.com/bullionbypost" target="_blank" rel="nofollow" class="inline-block twitter"></a>
+<a href="https://www.linkedin.com/company/bullion-by-post" target="_blank" rel="nofollow" class="inline-block linkedin"></a>
+</div>
+</div>
+<div class="col-md-2 col-sm-4 hidden-xs">
+<p><strong class="column-title">Login</strong></p>
+<form method="post" action="/accounts/login/" class="form-horizontal" id="f_returning_customer_footer">
+<input type='hidden' name='csrfmiddlewaretoken' value='W7Bv43LxRMmxu9CTGi7ytF78CQsIwPxM29nnYtjKGRNiYQxafIFUKI3ojQbeJv1B' />
+<input type="hidden" name="login" />
+<input type="text" name="footer-login-username" maxlength="250" autocomplete="username email" placeholder="Email address" class="form-control" required id="id_footer-login-username" />
+<input type="password" name="footer-login-password" autocomplete="current-password" placeholder="Password" class="form-control" required id="id_footer-login-password" />
+<button type="submit" class="pull-right btn btn-primary">Login </button>
+</form>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-8">
+<div class="disclaimer">
+<p>* Source: Experian Hitwise - UK Internet Visits (January 2019 - January 2020).</p>
+<p>&dagger; Minimum order values apply. Refer to <a href="https://www.bullionbypost.co.uk/info/delivery-options/">Delivery Options</a> for more information.</p>
+<p>Precious metal prices can be volatile and the value of your metal may go down as well as up. No responsibility can be accepted by Jewellery Quarter Bullion Limited for any loss caused by acting on information we have provided. We do not offer investment or tax advice and recommend that you conduct your own independent research before making any investment decisions.</p>
+<p>&copy; Copyright 2020 Jewellery Quarter Bullion Ltd.</p>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="company-details">
+<p><strong>Registered Office:</strong> Floor 16, Centre City Tower, 7 Hill Street, Birmingham, B5 4UA</p>
+<p><strong>Registered in England No.</strong> 06758398 <strong>VAT No.</strong> 941 5123 47</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://www.bullionbypost.co.uk/static/cache/js/output.a587232f2ac1.js" type="da3096500e0c4db545a891a9-text/javascript"></script>
+<script type="da3096500e0c4db545a891a9-text/javascript">
+            var home_page = false;
+            var STATIC_URL = "https://www.bullionbypost.co.uk/static/";
+            var login_url = "/accounts/login/";
+            var SSL_CONN = true;
+            var save_information_pack_url = "/accounts/information-pack/";
+            var auth = "False";
+            
+            var prices_valid = true;
+            var price_update_token = "66036ee6b9868";
+            
+            var eKomi = {
+                review: 'Speedy response and very well packaged.',
+                percentage: '99.1',
+                review_count: '21,457'
+            };
+            
+            var currency_symbol = '&pound;';
+            var loqate_address_find_url = '/loqate/ajax/addresses/find/';
+            var loqate_address_retrieve_url = '/loqate/ajax/addresses/retrieve/';
+        </script>
+<style>
+        .cookie-banner {
+            background-color: rgba(122, 122, 122, 0.9);
+            position: sticky;
+            bottom: 0;
+            z-index: 1;
+        }
+    
+        .cookie-banner p {
+            text-align: center;
+            font-size: 14px;
+            color: #ffffff;
+            margin: 0;
+            padding: 12px 70px;
+        }
+    
+        .cookie-banner p a {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    
+        .cookie-banner button {
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0);
+            border: 0;
+            position: absolute;
+            right: 22px;
+            top: 12px;
+        }
+    </style>
+<div class="cookie-banner">
+<p>We use cookies to give you the best experience on our website and to customise marketing content.<br />By continuing to browse you consent to receive all cookies. View our <a href="/info/privacy/" target="_blank">Privacy Policy</a> for more information.</p>
+<button>✕</button>
+</div>
+<script type="da3096500e0c4db545a891a9-text/javascript">
+        $(function() {
+            $('.cookie-banner button').click(function(){
+                $('.cookie-banner button').hide();
+                $('.cookie-banner').animate({'height': 0}, 500);
+            });
+        });
+    </script>
+<script type="da3096500e0c4db545a891a9-text/javascript">
+    var gold_gbp_chart_url = '/gold-price/week/ounces/GBP/';
+    var gold_usd_chart_url = '/gold-price/week/ounces/USD/';
+    var gold_eur_chart_url = '/gold-price/week/ounces/EUR/';
+    var silver_gbp_chart_url = '/silver-price/week/ounces/GBP/';
+    var silver_usd_chart_url = '/silver-price/week/ounces/USD/';
+    var silver_eur_chart_url = '/silver-price/week/ounces/EUR/';
+    var platinum_gbp_chart_url = '/platinum-price/week/ounces/GBP/';
+    var platinum_usd_chart_url = '/platinum-price/week/ounces/USD/';
+    var platinum_eur_chart_url = '/platinum-price/week/ounces/EUR/';
+    
+    var HEADER_PRICES_REFRESH_RATE = 30000;
+</script>
+<script type="da3096500e0c4db545a891a9-text/javascript">
+            var PRICE_UPDATES_REFRESH_RATE = 30000;
+            var REFRESH_RATE_TIMEOUT = new Date().getTime() + 3600000;
+
+            var telephone_number = '0121 634 8060';
+            var price_rounding_limit = 1000;
+
+            var URLS = {};
+        </script>
+<script src="https://www.bullionbypost.co.uk/static/shared/ajax/ajax_timeout.js" type="da3096500e0c4db545a891a9-text/javascript"></script>
+<script type="da3096500e0c4db545a891a9-text/javascript">
+            var youtube_video_loaded = false;
+            
+            $('#video-modal').on('show.bs.modal', function() {
+                if (! youtube_video_loaded) {
+                    $('#video-modal-content').load("/google/youtube-modal/");
+                    youtube_video_loaded = true;
+                }
+            });
+        </script>
+<script src="https://www.bullionbypost.co.uk/static/cache/js/output.024115c2b02a.js" type="da3096500e0c4db545a891a9-text/javascript"></script>
+<div style="display:none;">
+
+<script type="da3096500e0c4db545a891a9-text/javascript">
+    /* <![CDATA[ */
+        var google_conversion_id = 1051175824;
+        var google_conversion_language = "en";
+        var google_conversion_format = "3";
+        var google_conversion_color = "ffffff";
+        var google_conversion_label = "";
+        var google_conversion_value = 1.000000;
+        var google_remarketing_only = false;
+    /* ]]> */
+</script>
+<script type="da3096500e0c4db545a891a9-text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1051175824/?value=1.000000&amp;label=&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+
+
+<script type="da3096500e0c4db545a891a9-text/javascript">
+        /* <![CDATA[ */
+            var google_conversion_id = 1051175824;
+            var google_conversion_label = '4n_ACM720wEQkNee9QM';
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            var google_conversion_format = 3;
+        /* ]]> */
+    </script>
+<script type="da3096500e0c4db545a891a9-text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+<script type="da3096500e0c4db545a891a9-text/javascript">
+        /* <![CDATA[ */
+            var google_conversion_id = 1051175824;
+            var google_conversion_label = '1nOtCPaB8AEQkNee9QM';
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            var google_conversion_format = 3;
+        /* ]]> */
+    </script>
+<script type="da3096500e0c4db545a891a9-text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+<script type="da3096500e0c4db545a891a9-text/javascript">
+        /* <![CDATA[ */
+            var google_conversion_id = 1051175824;
+            var google_conversion_label = '00I6CP6A8AEQkNee9QM';
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            var google_conversion_format = 3;
+        /* ]]> */
+    </script>
+<script type="da3096500e0c4db545a891a9-text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+
+
+<script type="da3096500e0c4db545a891a9-text/javascript">
+                        var google_tag_params = {
+                            ecomm_prodid: '',
+                            ecomm_pagetype: 'siteview',
+                            ecomm_totalvalue: ''
+                        };
+                    </script>
+<script type="da3096500e0c4db545a891a9-text/javascript">
+    /* <![CDATA[ */
+        var google_conversion_id = 1051175824;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        var google_conversion_format = 3;
+    /* ]]> */
+</script>
+<script type="da3096500e0c4db545a891a9-text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+
+</div>
+<script type="da3096500e0c4db545a891a9-text/javascript">
+            var diagnostics = undefined;
+        </script>
+</body>
+</html>
